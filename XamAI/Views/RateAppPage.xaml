@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamAI.Views.RateAppPage"
+             Title="Rate the App">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Button Text="Take Photo and Analyze" Clicked="OnTakePhotoButtonClicked" />
+            <Image x:Name="image" Source="face.jpg" />
+            <ActivityIndicator x:Name="activityIndicator" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Emotion:" />
+                <Label x:Name="emotionResultLabel" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
