@@ -1,7 +1,7 @@
 # Oslo Xamarin Meetup
 
 **Location: Teknologihuset, Pilestredet 56, Oslo**  
-**Organizer: Monica B. Tvedt**
+**Organizers: Monica B. Tvedt, Kristoffer Hove**
 
 Interested in Xamarin and/or cross platform mobile development in C#? 
 Whether just starting or an experienced developer, you’re welcome! 
