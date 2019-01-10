@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:peak="clr-namespace:Peak.Controls" x:Class="Peak.App">
+    <Application.Resources>
+            
+        <!-- colors -->
+        <Color x:Key="color_gray_darkest">#4c4c4c</Color>
+        <Color x:Key="color_gray_dark">#808080</Color>
+        <Color x:Key="color_gray">#aaaaaa</Color>
+        <Color x:Key="color_gray_light">#d8d8d8</Color>
+        <Color x:Key="color_gray_lightest">#ececec</Color>
+        
+        <!-- fonts -->
+        <OnPlatform x:Key="font_extrabold" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Montserrat-ExtraBold.ttf#Montserrat-ExtraBold" />
+            <On Platform="iOS" Value="Montserrat-ExtraBold" />
+        </OnPlatform>
+        <OnPlatform x:Key="font_bold" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Montserrat-Bold.ttf#Montserrat-Bold" />
+            <On Platform="iOS" Value="Montserrat-Bold" />
+        </OnPlatform>
+        <OnPlatform x:Key="font_regular" x:TypeArguments="x:String">
+            <On Platform="Android" Value="Montserrat-Regular.ttf#Montserrat-Regular" />
+            <On Platform="iOS" Value="Montserrat-Regular" />
+        </OnPlatform>
+        
+         <!-- Styling of Controls -->
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="White" />
+            <Setter Property="BarTextColor" Value="{StaticResource color_gray_dark}" />
+        </Style>
+        
+         <Style TargetType="peak:RoundedButton">
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="FontSize">14</Setter>
+            <Setter Property="TextColor" Value="#000" />
+            <Setter Property="BorderColor" Value="#ccc" />
+            <Setter Property="HeightRequest" Value="50" />
+            
+            <!-- add padding instead of height. Remove heightrequest from xaml -->
+        </Style>
+        
+        <Style x:Key="TextBread" TargetType="Label">
+            <Setter Property="FontSize">14</Setter>
+            <Setter Property="TextColor" Value="{StaticResource color_gray_dark}" />
+        </Style>
+        
+        <Style x:Key="TextMuted" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource color_gray}" />
+        </Style>
+        
+        <Style x:Key="TextHeadline" TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource color_gray_darkest}" />
+        </Style>
+        
+    </Application.Resources>
+</Application>

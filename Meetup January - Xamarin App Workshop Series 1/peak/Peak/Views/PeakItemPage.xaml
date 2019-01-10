@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Name="page" x:Class="Peak.Views.PeakItemPage" xmlns:peak="clr-namespace:Peak.Controls" Title="New Peak">
+    <StackLayout Padding="35,32,32,20" VerticalOptions="StartAndExpand">
+        <Label Text="Title" Style="{StaticResource TextHeadline}" FontAttributes="Bold" />
+        <Editor Text="{Binding Source={x:Reference page}, Path=PeakItem.Title}"  Placeholder="Enter your peak title here" HeightRequest="40" Margin="0,0,0,32" />
+        
+        <Label Text="Description" Style="{StaticResource TextHeadline}" FontAttributes="Bold" />
+        <Editor Text="{Binding Source={x:Reference page}, Path=PeakItem.Description}" AutoSize="TextChanges" Placeholder="Enter your peak description here" MinimumHeightRequest="40" Margin="0,0,0,32" />
+       
+        <peak:RoundedButton HeightRequest="50" Text="Save" Clicked="OnSaveClicked"/>
+        
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Peak.Views.OnboardingPage" xmlns:cv="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" xmlns:peak="clr-namespace:Peak.Controls">
+    <Grid Padding="0,32,0,30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        
+        <cv:CarouselViewControl Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" x:Name="OnboardingCarousel" ShowIndicators="true" IndicatorsTintColor="#dddddd" CurrentPageIndicatorTintColor="#8b8b8b" IndicatorsShape="Circle" InterPageSpacing="0">
+            <cv:CarouselViewControl.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Onboarding card number one. Your main selling point!</x:String>
+                    <x:String>Onboarding card number two. This is why you need this app.</x:String>
+                    <x:String>Onboarding card number three. Are you sold yet?</x:String>
+                </x:Array>
+            </cv:CarouselViewControl.ItemsSource>
+        
+            <cv:CarouselViewControl.ItemTemplate>
+                <DataTemplate>
+                   <Grid Padding="32,32,32,64">
+                        <peak:CardView CornerRadius="32" BackgroundColor="{StaticResource color_gray_light}" Padding="40,40,40,80">
+                          <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+                           <Image Aspect="AspectFit" Source="http://www.smbnation.com/components/com_easyblog/themes/wireframe/images/placeholder-image.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0,0,0,-60"/>
+                           <Label XAlign="Center" Text="{Binding}" FontSize="18" Style="{StaticResource TextHeadline}" HorizontalOptions="Center" VerticalOptions="End"/>
+                          </StackLayout>
+                        </peak:CardView>
+                    </Grid>
+                </DataTemplate>
+            </cv:CarouselViewControl.ItemTemplate>
+        </cv:CarouselViewControl>
+        
+        <peak:RoundedButton Margin="20,0,0,0" Grid.Row="1" Grid.Column="0" HeightRequest="40" Text="Log in" Clicked="OnLogInTapped"/>
+        <peak:RoundedButton Margin="0,0,20,0" Grid.Row="1" Grid.Column="1" HeightRequest="40" Text="Sign Up" />
+       
+    </Grid>
+</ContentPage>

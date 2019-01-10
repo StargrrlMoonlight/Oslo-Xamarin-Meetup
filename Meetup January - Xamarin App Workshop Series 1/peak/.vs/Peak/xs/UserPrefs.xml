@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{207C02BE-7ADC-45C5-B8E3-B6419AFA29B3}|Default">
+  <MonoDevelop.Ide.ItemProperties.Peak.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Peak/App.xaml">
+    <Files>
+      <File FileName="Peak/App.xaml" Line="58" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
